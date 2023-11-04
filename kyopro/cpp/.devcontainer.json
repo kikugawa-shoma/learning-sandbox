@@ -1,0 +1,12 @@
+{
+  "name": "kyopro_cpp",
+  "dockerComposeFile": ["../../docker-compose.yml"],
+  "service": "kyopro_cpp",
+  "shutdownAction": "none",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-vscode.cpptools-extension-pack"]
+    }
+  },
+  "workspaceFolder": "/home/developer"
+}

@@ -1,8 +1,7 @@
-import {message} from './moduleImportTest'
+import { message } from "./moduleImportTest";
 
+console.log("hello");
+console.log(message);
 
-console.log('hello')
-console.log(message)
-
-const a:string = "world"
-console.log(a)
+const a: string = "world";
+console.log(a);

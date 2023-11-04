@@ -1,1 +1,4 @@
 node_modules
+
+# C++のビルドファイルを除外
+/kyopro/cpp/**/*.out
