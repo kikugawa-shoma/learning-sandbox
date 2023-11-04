@@ -22,6 +22,11 @@
                 "isDefault": true
             },
             "detail": "Task to compile active c++ file"
+        },
+        {
+            "label": "C++: delete compilation output file",
+            "type": "shell",
+            "command": "rm ${fileDirname}/${fileBasenameNoExtension}.out"
         }
     ],
     "version": "2.0.0"
