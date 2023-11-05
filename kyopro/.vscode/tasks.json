@@ -24,7 +24,7 @@
             "detail": "Task to compile active c++ file"
         },
         {
-            "label": "C++: delete compilation output file",
+            "label": "C++: delete compilation output file", // this task is not used now
             "type": "shell",
             "command": "rm ${fileDirname}/${fileBasenameNoExtension}.out"
         }
