@@ -1,6 +1,6 @@
 {
   "name": "kyopro_cpp",
-  "dockerComposeFile": ["../../docker-compose.yml"],
+  "dockerComposeFile": ["../docker-compose.yml"],
   "service": "kyopro_cpp",
   "shutdownAction": "none",
   "customizations": {

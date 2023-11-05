@@ -2,6 +2,10 @@
   "[cpp]":{
     "editor.formatOnSave": true,
     "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
   }
     
 }

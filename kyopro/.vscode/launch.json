@@ -10,7 +10,7 @@
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "preLaunchTask": "C++: build active file",
-            "postDebugTask": "C++: delete compilation output file",
+            // "postDebugTask": "C++: delete compilation output file",
             // "environment": [],
             "externalConsole": false,
             "avoidWindowsConsoleRedirection": false,
