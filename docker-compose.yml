@@ -2,11 +2,11 @@ version: '3'
 services:
   kyopro_cpp:
     container_name: kyopro_cpp
-    build: ./kyopro/cpp
+    build: ./kyopro
     tty: true
     expose:
       - 80
     volumes:
       - type: bind
-        source: ./kyopro/cpp
+        source: ./kyopro
         target: /home/developer
