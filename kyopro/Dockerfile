@@ -5,8 +5,9 @@ RUN apt update && apt install sudo -y
 RUN sudo apt install build-essential gdb -y
 RUN apt install -y g++-12
 WORKDIR /usr/bin
-COPY ./ac-library /usr/bin/ac-library
 RUN rm g++ && ln -s g++-12 g++
+COPY ./ac-library /usr/bin/ac-library
+ENV CPLUS_INCLUDE_PATH=/usr/bin/ac-library
 
 # create python executable env
 RUN apt install python3.10 -y
