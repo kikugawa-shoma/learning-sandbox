@@ -1,0 +1,7 @@
+.headerInit {
+    height: 64px;
+}
+
+.headerSpace {
+    flex-grow: 1;
+}
