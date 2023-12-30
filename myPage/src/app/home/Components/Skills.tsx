@@ -10,7 +10,7 @@ export const Skills = () => {
   return (
     <>
       <h2 style={{ textAlign: "center" }}>Skills</h2>
-      <List sx={{ width: "100%", bgcolor: "background.paper" }}>
+      <List sx={{ width: "100%" }}>
         {skillDataElements.map((skillDataElement) => {
           return (
             <SkillItem {...skillDataElement} key={skillDataElement.title} />
