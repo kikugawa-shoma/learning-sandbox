@@ -1,12 +1,15 @@
 import { Header, About, Skills } from "./Components";
+import CssBaseline from "@mui/material/CssBaseline";
 
 const Home = () => {
   return (
     <>
-      <Header />
-      <About />
-      <Skills />
-      <div style={{ height: "2000px" }}></div>
+      <CssBaseline>
+        <Header />
+        <About />
+        <Skills />
+        <div style={{ height: "2000px" }}></div>
+      </CssBaseline>
     </>
   );
 };
