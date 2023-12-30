@@ -1,12 +1,18 @@
 import { Header, About, Skills } from "./Components";
+import CssBaseline from "@mui/material/CssBaseline";
+import React from "react";
+import { UserDefaultThema } from "@/hooks";
 
 const Home = () => {
   return (
     <>
-      <Header />
-      <About />
-      <Skills />
-      <div style={{ height: "2000px" }}></div>
+      <UserDefaultThema>
+        <CssBaseline />
+        <Header />
+        <About />
+        <Skills />
+        <div style={{ height: "2000px" }}></div>
+      </UserDefaultThema>
     </>
   );
 };
