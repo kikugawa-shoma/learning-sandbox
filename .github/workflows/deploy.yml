@@ -33,6 +33,8 @@ jobs:
         working-directory: githubPages
         run: >
           cp -rf ../pageSource/myPage/out/* ./ 
+          && git config --global user.email "system@example.com"
+          && git config --global user.name "System"
           && git add -A 
           && git commit -m 'update'
           && git push origin main
