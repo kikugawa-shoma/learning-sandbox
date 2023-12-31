@@ -1,9 +1,18 @@
 name: build and delpoy portforio page
-on: [workflow_dispatch]
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - myPage/**
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20.x"
       - name: Checkout Source
         uses: actions/checkout@v4
         with:
@@ -18,5 +27,12 @@ jobs:
           token: ${{ secrets.SSH_PRIVATE_KEY }}
           path: ./githubPages
       - name: Build Page Source
-        run: cd pageSource && ls
-        working-derectory: ./pageSource
+        working-directory: pageSource/myPage
+        run: npm ci && npm run build
+      - name: Update My Page Static Files
+        working-directory: githubPages
+        run: >
+          cp -rf ../pageSource/myPage/out/* ./ 
+          && git add -A 
+          && git commit -m 'update'
+          && git push origin main
