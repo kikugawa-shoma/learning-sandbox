@@ -2,3 +2,6 @@ node_modules
 
 # C++のビルドファイルを除外
 /kyopro/**/*.out
+
+# act実行時に使うトークンが書かれたファイルを除外
+/act.secrets

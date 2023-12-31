@@ -1,0 +1,22 @@
+name: build and delpoy portforio page
+on: [workflow_dispatch]
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v4
+        with:
+          repository: "kikugawa-shoma/learning-sandbox"
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          path: ./pageSource
+      - name: Checkout GitHub Pages Repository
+        uses: actions/checkout@v4
+        with:
+          repository: "kikugawa-shoma/kikugawa-shoma.github.io"
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          token: ${{ secrets.SSH_PRIVATE_KEY }}
+          path: ./githubPages
+      - name: Build Page Source
+        run: cd pageSource && ls
+        working-derectory: ./pageSource
