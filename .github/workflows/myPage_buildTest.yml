@@ -1,8 +1,8 @@
 name: MyPage Build Test
 on:
   push:
-    branches:
-      - "!main"
+    branches-ignore:
+      - "main"
 jobs:
   test-for-buildability:
     runs-on: ubuntu-latest
