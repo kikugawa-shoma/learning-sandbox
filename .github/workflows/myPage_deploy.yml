@@ -26,9 +26,18 @@ jobs:
           ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
           token: ${{ secrets.SSH_PRIVATE_KEY }}
           path: ./githubPages
+      - uses: actions/cache@v3
+        id: npm_cache
+        with:
+          path: myPage/node_modules
+          key: ${{ hashFiles('myPage/package-lock.json') }}
+      - name: Install NPM Libraries
+        working-directory: pageSource/myPage
+        if: steps.npm_cache.outputs.cache-hit != 'true'
+        run: npm ci
       - name: Build Page Source
         working-directory: pageSource/myPage
-        run: npm ci && npm run build
+        run: npm run build
       - name: Update My Page Static Files
         working-directory: githubPages
         run: >
