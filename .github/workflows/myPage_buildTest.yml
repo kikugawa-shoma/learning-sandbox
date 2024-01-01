@@ -1,8 +1,7 @@
 name: MyPage Build Test
 on:
   push:
-    paths:
-      - "myPage/**"
+    branches:
       - "!main"
 jobs:
   test-for-buildability:
