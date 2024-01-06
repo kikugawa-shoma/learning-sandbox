@@ -14,8 +14,8 @@ jobs:
         with:
           repository: "kikugawa-shoma/learning-sandbox"
           ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
-      - name: test
-        run: git fetch origin && git branch && git diff origin/main --name-only
+      - name: git configuration # 次のステップでorigin/mainとのdiffを取るためにfetchしておくことが必要
+        run: git fetch origin
       - name: Check Change Existence in myPage
         id: check-diff-existence-in-myPage
         run: if git diff origin/main --name-only | grep -q myPage/ ; then echo "result=true" ; else echo "result=false" ; fi >> "$GITHUB_OUTPUT"
