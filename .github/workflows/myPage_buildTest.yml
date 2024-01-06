@@ -14,8 +14,6 @@ jobs:
         with:
           repository: "kikugawa-shoma/learning-sandbox"
           ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
-      - name: git config
-        run: git remote add origin https://github.com/kikugawa-shoma/learning-sandbox
       - name: test
         run: git branch && git diff origin/main --name-only
       - name: Check Change Existence in myPage
