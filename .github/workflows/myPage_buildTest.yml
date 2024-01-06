@@ -15,7 +15,7 @@ jobs:
           repository: "kikugawa-shoma/learning-sandbox"
           ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: test
-        run: git branch && git diff origin/main --name-only
+        run: git fetch origin && git branch && git diff origin/main --name-only
       - name: Check Change Existence in myPage
         id: check-diff-existence-in-myPage
         run: if git diff main --name-only | grep -q myPage/ ; then echo "result=true" ; else echo "result=false" ; fi >> "$GITHUB_OUTPUT"
