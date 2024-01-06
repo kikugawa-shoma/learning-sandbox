@@ -18,7 +18,7 @@ jobs:
         run: git fetch origin && git branch && git diff origin/main --name-only
       - name: Check Change Existence in myPage
         id: check-diff-existence-in-myPage
-        run: if git diff main --name-only | grep -q myPage/ ; then echo "result=true" ; else echo "result=false" ; fi >> "$GITHUB_OUTPUT"
+        run: if git diff origin/main --name-only | grep -q myPage/ ; then echo "result=true" ; else echo "result=false" ; fi >> "$GITHUB_OUTPUT"
   echo-diff-check-result:
     runs-on: ubuntu-latest
     needs:
