@@ -1,10 +1,11 @@
 #include <iostream>
 #include <vector>
 
-using namespace std;
-using ll long long;
+#define ll long long
 
-void printV(vector<long long> &A)
+using namespace std;
+
+void printV(vector<ll> &A)
 {
   size_t L = A.size();
   for (size_t l = 0; l < L; l++)
