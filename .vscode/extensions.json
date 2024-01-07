@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "Codeium.codeium",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "github.vscode-github-actions",
+    "ms-azuretools.vscode-docker",
+    "phind.phind",
+    "ritwickdey.LiveServer",
+  ]
+}
