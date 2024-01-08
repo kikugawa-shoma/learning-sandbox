@@ -5,7 +5,10 @@
 
 using namespace std;
 
-void printV(vector<ll> &A)
+
+
+template <typename T>
+void printV(vector<T> &A)
 {
   size_t N = A.size();
   for (int i = 0; i < N; i++)
