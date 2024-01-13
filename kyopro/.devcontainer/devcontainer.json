@@ -9,5 +9,6 @@
     }
   },
   "workspaceFolder": "/home/developer",
-  "initializeCommand": "echo 'Hello World!'" // @see https://github.com/microsoft/vscode-remote-release/issues/9302#issuecomment-1859139566
+  "initializeCommand": "echo 'Hello World!'", // @see https://github.com/microsoft/vscode-remote-release/issues/9302#issuecomment-1859139566
+  "updateRemoteUserUID": true // @see https://containers.dev/implementors/json_reference/
 }
