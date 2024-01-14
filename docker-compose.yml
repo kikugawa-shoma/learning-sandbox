@@ -9,4 +9,4 @@ services:
     volumes:
       - type: bind
         source: ./kyopro
-        target: /home/developer
+        target: /home/developer/kyopro
