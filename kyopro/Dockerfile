@@ -20,15 +20,13 @@ RUN apt install python3.10 -y
 RUN ln -s /usr/bin/python3.10 /usr/bin/python
 RUN ln -s /usr/bin/python3.10 /usr/bin/python3
 
-WORKDIR /home/developer/src
-
-# bashrcに設定を追加
-COPY ./.devcontainer/devcontainer.bashrc /root/.tmpBashrcToAdd
-RUN cat /root/.tmpBashrcToAdd >> /root/.bashrc
-
 # グループ・ユーザーを作成(gid、uidはdevcontainer.jsonのupdateRemoteUserUIDによってホスト側で使っているユーザーのuidとgidに上書きされる)
 RUN groupadd -g 1100 developer && \
     useradd -m -s /bin/bash -u 1100 -g 1100 developer
+# bashrcに設定を追加
+COPY ./.devcontainer/devcontainer.bashrc /home/developer/.tmpBashrcToAdd
+RUN cat /home/developer/.tmpBashrcToAdd >> /home/developer/.bashrc
+
 USER developer
 
 CMD ["bash"]
