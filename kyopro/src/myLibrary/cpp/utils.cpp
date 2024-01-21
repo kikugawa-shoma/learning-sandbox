@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <sstream>
 
 using namespace std;
 
@@ -29,6 +30,26 @@ void inputVec(vector<T> &A)
   {
     cin >> A[i];
   }
+}
+
+/**
+ * 空白区切り入力の文字列での受け取り
+ */
+vector<string> inputStrVec()
+{
+  string inputStr;
+  getline(cin, inputStr);
+  inputStr.push_back(' ');
+
+  stringstream ss{inputStr};
+  vector<string> v(0);
+  string tmp;
+  while (getline(ss, tmp, ' '))
+  {
+    if (tmp.size() != 0)
+      v.push_back(tmp);
+  }
+  return v;
 }
 
 /**
