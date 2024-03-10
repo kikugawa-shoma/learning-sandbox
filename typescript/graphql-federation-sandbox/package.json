@@ -1,0 +1,30 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "dev:w": "nodemon --exec 'npm run dev' -w src -e 'ts js'",
+    "dev:sub-product": "nodemon --exec 'tsx src/subgraphs/product/index.ts' -w src/subgraphs/product -e 'ts js'",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@apollo/rover": "^0.22.0",
+    "nodemon": "^3.1.0",
+    "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.10.1",
+    "@types/lodash": "^4.14.202",
+    "graphql": "^16.8.1",
+    "lodash": "^4.17.21"
+  },
+  "type": "module"
+}
