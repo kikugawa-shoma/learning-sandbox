@@ -1,9 +1,13 @@
+// node_module import
 import _ from "lodash";
-import { msg2 } from "./module";
+// relative import
+import { msgA } from "./moduleA";
+// absolute import
+import { msgB } from "moduleB";
 
-const msg: string = "hello";
+const msg: string = "hoge";
 
 console.log(msg);
 
-console.log(msg2);
+console.log(msgA + " " + msgB);
 console.log(_.chunk(["a", "b", "c", "d"], 3));
