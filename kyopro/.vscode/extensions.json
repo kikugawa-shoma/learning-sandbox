@@ -2,5 +2,6 @@
   "recommendations": [
     "Codeium.codeium",
     "phind.phind",
+    "denoland.vscode-deno"
   ]
 }
