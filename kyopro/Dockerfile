@@ -20,6 +20,12 @@ RUN apt install python3.10 -y
 RUN ln -s /usr/bin/python3.10 /usr/bin/python
 RUN ln -s /usr/bin/python3.10 /usr/bin/python3
 
+# create TypeScript(Deno) executable env
+RUN sudo apt install -y curl unzip
+WORKDIR /home/developer
+RUN curl -fsSL https://deno.land/install.sh | sudo DENO_INSTALL=/home/developer sh -s v1.35.1
+RUN mv /home/developer/bin/deno /usr/bin/deno@1.35.1
+
 # グループ・ユーザーを作成(gid、uidはdevcontainer.jsonのupdateRemoteUserUIDによってホスト側で使っているユーザーのuidとgidに上書きされる)
 RUN groupadd -g 1100 developer && \
     useradd -m -s /bin/bash -u 1100 -g 1100 developer

@@ -1,11 +1,17 @@
 {
-  "[cpp]":{
+  "[cpp]": {
     "editor.formatOnSave": true,
     "editor.tabSize": 2
   },
   "[json]": {
     "editor.formatOnSave": true,
     "editor.tabSize": 2
+  },
+  "deno.enable": true,
+  "deno.lint": true,
+  "deno.path": "/usr/bin/deno@1.35.1",
+  "editor.formatOnSave": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
   }
-    
 }
