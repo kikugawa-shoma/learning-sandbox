@@ -1,7 +1,7 @@
 import { Configuration } from "webpack";
 import path from "path";
 
-export const config: Configuration = {
+const config: Configuration = {
   entry: "./src/index.ts",
   mode: "production",
   output: {
