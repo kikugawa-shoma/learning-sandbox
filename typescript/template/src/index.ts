@@ -3,7 +3,7 @@ import _ from "lodash";
 // relative import
 import { msgA } from "./moduleA";
 // absolute import
-import { msgB } from "moduleB";
+import { msgB } from "./moduleB";
 
 const msg: string = "hoge";
 

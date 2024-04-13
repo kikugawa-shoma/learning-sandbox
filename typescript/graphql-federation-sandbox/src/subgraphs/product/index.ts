@@ -30,20 +30,22 @@ const resolvers = {
 
 export const server = new ApolloServer({ typeDefs, resolvers });
 
-await server.start();
+// await server.start();
 
-const app = express();
-const httpServer = http.createServer(app);
+// const app = express();
+// const httpServer = http.createServer(app);
 
-app.use(
-  "/",
-  cors<cors.CorsRequest>(),
-  express.json(),
-  expressMiddleware(server)
-);
+// app.use(
+//   "/",
+//   cors<cors.CorsRequest>(),
+//   express.json(),
+//   expressMiddleware(server)
+// );
 
-// Modified server startup
-await new Promise<void>((resolve) =>
-  httpServer.listen({ port: 4000 }, resolve)
-);
-console.log(`🚀 Server ready at http://localhost:4000/`);
+// // Modified server startup
+// (async () => {
+//   await new Promise<void>((resolve) =>
+//     httpServer.listen({ port: 4000 }, resolve)
+//   );
+//   console.log(`🚀 Server ready at http://localhost:4000/`);
+// })();

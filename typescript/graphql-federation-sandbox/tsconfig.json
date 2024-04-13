@@ -1,11 +1,8 @@
 {
-    "compilerOptions": {
-        "baseUrl": "./",
-        "esModuleInterop": true,
-        "moduleResolution": "Bundler",
-        "module": "es2022",
-        "target": "es2022",
-    },
-    "include": ["./src/**/*.ts"],
-    "exclude": ["node_modules"]
+  "compilerOptions": {
+    "baseUrl": "src",
+    "esModuleInterop": true,
+    "module": "CommonJS"
+  },
+  "include": ["src"],
 }

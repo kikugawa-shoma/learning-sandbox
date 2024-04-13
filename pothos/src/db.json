@@ -1,0 +1,22 @@
+{
+  "people": [
+    {
+      "name": "taro",
+      "age": 20,
+      "id": "1",
+      "friendIds": ["2"]
+    },
+    {
+      "name": "jiro",
+      "age": 20,
+      "id": "2",
+      "friendIds": ["1", "3"]
+    },
+    {
+      "name": "kotaro",
+      "age": 20,
+      "id": "3",
+      "friendIds": ["2"]
+    }
+  ]
+}
