@@ -13,5 +13,7 @@
   "editor.formatOnSave": true,
   "[typescript]": {
     "editor.defaultFormatter": "denoland.vscode-deno"
-  }
+  },
+  "terminal.integrated.fontSize": 20,
+  "editor.fontSize": 20,
 }
