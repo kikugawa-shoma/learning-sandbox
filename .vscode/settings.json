@@ -20,5 +20,7 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.tabSize": 2,
         "editor.linkedEditing": true
-    }
+    },
+    "editor.fontSize":20,
+    "terminal.integrated.fontSize": 20
 }
