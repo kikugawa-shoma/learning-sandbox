@@ -31,6 +31,7 @@ RUN groupadd -g 1100 developer && \
     useradd -m -s /bin/bash -u 1100 -g 1100 developer
 # bashrcに設定を追加
 COPY ./.devcontainer/devcontainer.bashrc /home/developer/.tmpBashrcToAdd
+COPY ./.devcontainer/seasonalEmoji.sh /usr/bin/
 RUN cat /home/developer/.tmpBashrcToAdd >> /home/developer/.bashrc
 
 USER developer
