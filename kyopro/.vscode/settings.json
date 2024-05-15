@@ -16,4 +16,6 @@
   },
   "terminal.integrated.fontSize": 20,
   "editor.fontSize": 20,
+  "editor.acceptSuggestionOnEnter": "off",
+  "window.zoomLevel": 1
 }

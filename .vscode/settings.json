@@ -22,5 +22,7 @@
         "editor.linkedEditing": true
     },
     "editor.fontSize":20,
-    "terminal.integrated.fontSize": 20
+    "terminal.integrated.fontSize": 20,
+    "editor.acceptSuggestionOnEnter": "off",
+    "window.zoomLevel": 1
 }
