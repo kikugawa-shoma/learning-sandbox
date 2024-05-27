@@ -4,7 +4,8 @@
 		"prefix": [
 			"i",
 			"in",
-			"inc"
+			"inc",
+			"initialize"
 		],
 		"body": [
 			"#include <bits/stdc++.h>",

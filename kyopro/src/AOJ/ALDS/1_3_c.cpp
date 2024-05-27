@@ -10,11 +10,15 @@ struct Node
   T value;
 };
 
+/**
+ * 双方向連結リストクラス
+ */
 template <typename T>
 class LinkedList
 {
 public:
   Node<T> *FIRST = new Node<T>; // 実装上用意したNULLノード
+
   LinkedList()
   {
     FIRST->next = FIRST;
@@ -26,9 +30,13 @@ public:
     return _SIZE;
   }
 
-  void insert(T valueOfNodeToAdd)
+  /**
+   * 与えられたvalueを持つノードを先頭に追加する
+   * @param value - 追加するノードのvalue
+   */
+  void insert(T value)
   {
-    Node<T> *nodeToAdd = createNode(valueOfNodeToAdd);
+    Node<T> *nodeToAdd = createNode(value);
     Node<T> *crntHead = FIRST->next; // NOTE:要素数が0のときcrntHead == FIRSTとなるのでうまくいく
 
     FIRST->next = nodeToAdd;
@@ -37,6 +45,10 @@ public:
     crntHead->prev = nodeToAdd;
   }
 
+  /**
+   * 与えられたvalueと一致するvalueを持つ最初のノードを削除する
+   * @param value - 削除したいノードのvalue
+   */
   void deleteByValue(T value)
   {
     Node<T> *nodeToDelete = searchByValue(value);
@@ -45,6 +57,7 @@ public:
 
   /**
    * 引数で与えられたvalueを値として持つ最初のノードを返却する
+   * NOTE:valueを値として持つノードが存在しなければNullノードのポインタが返却される
    * @param value - 検索したいノードのvalue
    * @return - ヒットしたノードのポインタ
    */
@@ -60,14 +73,37 @@ public:
     return crntNode;
   }
 
+  /**
+   * 最初のノードを削除
+   */
   void deleteFirst()
   {
     deleteNode(FIRST->next);
   }
 
+  /**
+   * 最後のノードを削除
+   */
   void deleteLast()
   {
     deleteNode(FIRST->prev);
+  }
+
+  void printList()
+  {
+    Node<T> *crntNode = FIRST->next;
+    while (1)
+    {
+      cout << crntNode->value;
+      Node<T> *nextNode = crntNode->next;
+      if (nextNode == FIRST)
+      {
+        break;
+      }
+      cout << " ";
+      crntNode = nextNode;
+    }
+    cout << endl;
   }
 
 private:
@@ -124,18 +160,34 @@ int main()
   scanf("%d", &n);
   char command[20];
   int q;
-  LinkedList list = LinkedList<int>();
+  LinkedList linkedList = LinkedList<int>();
   for (int i = 0; i < n; i++)
   {
     scanf("%s", command);
     string s(command);
-
     if (s.compare("insert") == 0 || s.compare("delete") == 0)
     {
       scanf("%d", &q);
+      if (s.compare("insert") == 0)
+      {
+        linkedList.insert(q);
+      }
+      if (s.compare("delete") == 0)
+      {
+        linkedList.deleteByValue(q);
+      }
+    }
+    if (s.compare("deleteFirst") == 0)
+    {
+      linkedList.deleteFirst();
+    }
+    if (s.compare("deleteLast") == 0)
+    {
+      linkedList.deleteLast();
     }
     scanf("%*c");
   }
+  linkedList.printList();
 
   return 0;
 }
