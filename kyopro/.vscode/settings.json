@@ -17,5 +17,32 @@
   "terminal.integrated.fontSize": 20,
   "editor.fontSize": 20,
   "editor.acceptSuggestionOnEnter": "off",
-  "window.zoomLevel": 1
+  "window.zoomLevel": 1,
+  "files.associations": {
+    "*.tcc": "cpp",
+    "deque": "cpp",
+    "string": "cpp",
+    "vector": "cpp",
+    "any": "cpp",
+    "array": "cpp",
+    "bitset": "cpp",
+    "ciso646": "cpp",
+    "coroutine": "cpp",
+    "forward_list": "cpp",
+    "list": "cpp",
+    "string_view": "cpp",
+    "fstream": "cpp",
+    "istream": "cpp",
+    "ranges": "cpp",
+    "span": "cpp",
+    "sstream": "cpp",
+    "functional": "cpp",
+    "regex": "cpp",
+    "type_traits": "cpp",
+    "tuple": "cpp",
+    "valarray": "cpp",
+    "unordered_map": "cpp",
+    "unordered_set": "cpp",
+    "stacktrace": "cpp"
+  }
 }

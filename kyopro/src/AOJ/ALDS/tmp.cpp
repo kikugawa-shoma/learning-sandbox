@@ -2,13 +2,9 @@
 
 using namespace std;
 
-void returnVoid()
-{
-  return;
-}
-
 int main()
 {
-  returnVoid();
+  cout << (3 % 2) << endl;
+  cout << (4 % 2) << endl;
   return 0;
 }
