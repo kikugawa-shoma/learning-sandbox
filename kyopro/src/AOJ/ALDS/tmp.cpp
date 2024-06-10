@@ -18,6 +18,7 @@ int main()
   int midIndex = v.size() / 2;
   auto l = vector<int>(v.begin(), v.begin() + midIndex);
   auto r = vector<int>(v.begin() + midIndex, v.end());
+  l[0] = 100;
   printVec(v);
   printVec(l);
   printVec(r);
