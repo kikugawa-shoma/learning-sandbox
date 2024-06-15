@@ -1,14 +1,18 @@
 {
   "name": "kyopro_cpp",
-  "dockerComposeFile": ["../../docker-compose.yml"],
+  "dockerComposeFile": [
+    "../docker-compose.yml"
+  ],
   "service": "kyopro_cpp",
   "shutdownAction": "none",
   "customizations": {
     "vscode": {
-      "extensions": ["ms-vscode.cpptools-extension-pack"]
+      "extensions": [
+        "ms-vscode.cpptools-extension-pack"
+      ]
     }
   },
   "workspaceFolder": "/home/developer/kyopro",
-  "initializeCommand": "echo 'Hello World!'", // @see https://github.com/microsoft/vscode-remote-release/issues/9302#issuecomment-1859139566
+  // "initializeCommand": "echo 'Hello World!'", // @see https://github.com/microsoft/vscode-remote-release/issues/9302#issuecomment-1859139566
   "updateRemoteUserUID": true // @see https://containers.dev/implementors/json_reference/
 }

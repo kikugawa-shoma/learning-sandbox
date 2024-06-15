@@ -1,0 +1,16 @@
+{
+  "name": "js_and_ts",
+  "dockerComposeFile": [
+    "../docker-compose.yml"
+  ],
+  "service": "js_and_ts",
+  "shutdownAction": "none",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+      ]
+    }
+  },
+  "workspaceFolder": "/home/developer/",
+  "updateRemoteUserUID": true // @see https://containers.dev/implementors/json_reference/
+}
