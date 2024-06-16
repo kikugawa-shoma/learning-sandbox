@@ -11,6 +11,6 @@
       ]
     }
   },
-  "workspaceFolder": "/home/developer/",
+  "workspaceFolder": "/home/developer/src",
   "updateRemoteUserUID": true // @see https://containers.dev/implementors/json_reference/
 }
